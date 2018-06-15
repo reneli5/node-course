@@ -1,3 +1,4 @@
+const port = process.env.PORT || 3000
 const express = require("express");
 const hbs = require("hbs");
 const fs = require("fs");
@@ -45,6 +46,6 @@ app.get("/about", (request, response) => {
 app.get("/bad", (request, response) => {
     response.send({errorMessage: "oops"});
 })
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("console is open for business....");
 });
